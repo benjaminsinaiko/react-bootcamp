@@ -6,8 +6,16 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Hello to="Ringo" from="Paul" />
-        <Hello to="Cher" from="Sonny" />
+        <Hello
+          to="Ringo"
+          from="Paul"
+          num={3}
+          data={[1, 2, 3, 4, 5]}
+          isFunny
+          bangs={4}
+          img="http://cdn.akc.org/content/hero/westiehero.jpg"
+        />
+        <Hello to="Britney" from="Adele" bangs={10} />
       </div>
     );
   }
