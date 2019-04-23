@@ -1,22 +1,26 @@
 import React, { Component } from 'react'
-import Game from './Game'
-import Demo from './Demo'
-import Button from './Button'
-import BrokenClick from './BrokenClick'
-import Rando from './Rando'
-import Clicker from './Clicker'
+import Game from './stateIntro/Game'
+import Demo from './stateIntro/Demo'
+import Button from './stateIntro/Button'
+import BrokenClick from './stateIntro/BrokenClick'
+import Rando from './stateIntro/Rando'
+import Clicker from './stateIntro/Clicker'
 import './App.css'
+
+import RollDice from './diceExercise/RollDice'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Game />
+        {/* <Game />
         <Demo animal="Bobcat" food="Pineapple" />
         <Button />
         <BrokenClick />
         <Rando maxNum={10} />
-        <Clicker />
+        <Clicker /> */}
+
+        <RollDice face="five" />
       </div>
     )
   }
