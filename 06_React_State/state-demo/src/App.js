@@ -15,7 +15,8 @@ import IconList from './statePatterns/IconList'
 
 import Lottery from './lottery/Lottery'
 
-import CoinFlip from './coinFlip/CoinFlip'
+import CoinFlip from './coinFlip/MyCoinFlip'
+import CoinContainer from './coinFlip/CoinContainer'
 
 class App extends Component {
   render() {
@@ -37,6 +38,8 @@ class App extends Component {
         <Lottery title="Mini Daily" numBalls={4} maxNum={10} /> */}
 
         <CoinFlip />
+        <hr />
+        <CoinContainer />
       </div>
     )
   }

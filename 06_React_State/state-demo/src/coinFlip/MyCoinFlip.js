@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Coin from './Coin'
+import Coin from './MyCoin'
 import './CoinFlip.css'
 
 class CoinFlip extends Component {
