@@ -18,6 +18,8 @@ import Lottery from './lottery/Lottery'
 import CoinFlip from './coinFlip/MyCoinFlip'
 import CoinContainer from './coinFlip/CoinContainer'
 
+import BoxesContainer from './colorBoxes/BoxesContainer'
+
 class App extends Component {
   render() {
     return (
@@ -37,9 +39,11 @@ class App extends Component {
         {/* <Lottery />
         <Lottery title="Mini Daily" numBalls={4} maxNum={10} /> */}
 
-        <CoinFlip />
+        {/* <CoinFlip />
         <hr />
-        <CoinContainer />
+        <CoinContainer /> */}
+
+        <BoxesContainer />
       </div>
     )
   }
