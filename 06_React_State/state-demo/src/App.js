@@ -10,10 +10,12 @@ import Clicker from './stateIntro/Clicker'
 
 import RollDice from './diceExercise/RollDice'
 
-import ScoreKeeper from './state-patterns/ScoreKeeper'
-import IconList from './state-patterns/IconList'
+import ScoreKeeper from './statePatterns/ScoreKeeper'
+import IconList from './statePatterns/IconList'
 
 import Lottery from './lottery/Lottery'
+
+import CoinFlip from './coinFlip/CoinFlip'
 
 class App extends Component {
   render() {
@@ -31,8 +33,10 @@ class App extends Component {
         {/* <ScoreKeeper />
         <IconList /> */}
 
-        <Lottery />
-        <Lottery title="Mini Daily" numBalls={4} maxNum={10} />
+        {/* <Lottery />
+        <Lottery title="Mini Daily" numBalls={4} maxNum={10} /> */}
+
+        <CoinFlip />
       </div>
     )
   }
