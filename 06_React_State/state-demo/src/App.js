@@ -13,6 +13,8 @@ import RollDice from './diceExercise/RollDice'
 import ScoreKeeper from './state-patterns/ScoreKeeper'
 import IconList from './state-patterns/IconList'
 
+import Lottery from './lottery/Lottery'
+
 class App extends Component {
   render() {
     return (
@@ -26,8 +28,11 @@ class App extends Component {
 
         {/* <RollDice face="five" /> */}
 
-        <ScoreKeeper />
-        <IconList />
+        {/* <ScoreKeeper />
+        <IconList /> */}
+
+        <Lottery />
+        <Lottery title="Mini Daily" numBalls={4} maxNum={10} />
       </div>
     )
   }
