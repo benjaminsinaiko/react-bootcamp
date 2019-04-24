@@ -11,6 +11,7 @@ import Clicker from './stateIntro/Clicker'
 import RollDice from './diceExercise/RollDice'
 
 import ScoreKeeper from './state-patterns/ScoreKeeper'
+import IconList from './state-patterns/IconList'
 
 class App extends Component {
   render() {
@@ -26,6 +27,7 @@ class App extends Component {
         {/* <RollDice face="five" /> */}
 
         <ScoreKeeper />
+        <IconList />
       </div>
     )
   }
