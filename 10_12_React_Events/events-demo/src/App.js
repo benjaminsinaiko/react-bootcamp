@@ -6,13 +6,17 @@ import ButtonList from './buttonList/ButtonList'
 import NumberList from './numberList/NumberList'
 import BetterNumberList from './numberList/BetterNumberList'
 
+import Hangman from './hangman/Hangman'
+
 function App() {
   return (
     <div className="App">
-      <ButtonList />
+      {/* <ButtonList /> */}
 
-      <NumberList />
-      <BetterNumberList />
+      {/* <NumberList />
+      <BetterNumberList /> */}
+
+      <Hangman />
     </div>
   )
 }
