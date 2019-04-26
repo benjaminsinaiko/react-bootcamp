@@ -8,6 +8,8 @@ import BetterNumberList from './numberList/BetterNumberList'
 
 import Hangman from './hangman/Hangman'
 
+import Board from './lightsOut/Board'
+
 function App() {
   return (
     <div className="App">
@@ -16,7 +18,9 @@ function App() {
       {/* <NumberList />
       <BetterNumberList /> */}
 
-      <Hangman />
+      {/* <Hangman /> */}
+
+      <Board />
     </div>
   )
 }
