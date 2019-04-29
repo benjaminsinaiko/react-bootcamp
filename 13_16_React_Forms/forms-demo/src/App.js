@@ -8,6 +8,8 @@ import ShoppingList from './shoppingList/ShoppingList'
 
 import BoxList from './colorBox/BoxList'
 
+import TodoList from './todoList/TodoList'
+
 function App() {
   return (
     <div className="App">
@@ -16,7 +18,9 @@ function App() {
 
       {/* <ShoppingList /> */}
 
-      <BoxList />
+      {/* <BoxList /> */}
+
+      <TodoList />
     </div>
   )
 }
