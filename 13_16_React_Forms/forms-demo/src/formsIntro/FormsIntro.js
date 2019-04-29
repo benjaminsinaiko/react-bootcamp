@@ -18,10 +18,12 @@ export default class FormsIntro extends Component {
   render() {
     return (
       <div>
-        <h1>Form Demo</h1>
+        <h1>Forms Demo</h1>
         <form onSubmit={this.handleSubmit}>
+          <label htmlFor="username">Username</label>
           <input
             type="text"
+            id="usernme"
             value={this.state.usernme}
             onChange={this.handleChange}
           />
