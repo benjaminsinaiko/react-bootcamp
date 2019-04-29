@@ -9,15 +9,33 @@ class TodoList extends Component {
       todos: []
     }
   }
-  create = todo => {
+  create = newTodo => {
     this.setState({
-      todos: [...this.state.todos, todo]
+      todos: [...this.state.todos, newTodo]
     })
   }
   delete = id => {
     this.setState({
       todos: this.state.todos.filter(todo => todo.id !== id)
     })
+  }
+  update = (id, updatedTodo) => {
+    const updatedTodos = this.state.todos.map(todo => {
+      if (todo.id === id) {
+        return { ...todo, todoItem: updatedTodo }
+      }
+      return todo
+    })
+    this.setState({ todos: updatedTodos })
+  }
+  toggleCompletion = id => {
+    const updatedTodos = this.state.todos.map(todo => {
+      if (todo.id === id) {
+        return { ...todo, completed: !todo.completed }
+      }
+      return todo
+    })
+    this.setState({ todos: updatedTodos })
   }
 
   render() {
@@ -26,7 +44,10 @@ class TodoList extends Component {
         key={todo.id}
         id={todo.id}
         todoItem={todo.todoItem}
+        completed={todo.completed}
         deleteTodo={this.delete}
+        updateTodo={this.update}
+        toggleTodo={this.toggleCompletion}
       />
     ))
     return (
