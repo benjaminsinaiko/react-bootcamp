@@ -6,6 +6,7 @@ class Die extends Component {
     this.props.handleClick(this.props.idx)
   }
   render() {
+    console.log(this.props)
     return (
       <button
         className={'Die'}
