@@ -3,7 +3,8 @@ import './App.css'
 
 // import Timer from './timer/Timer'
 // import ZenQuotes from './zenQuote/ZenQuote'
-import GithubUserInfo from './githubUser/GithubUserInfo'
+// import GithubUserInfo from './githubUser/GithubUserInfo'
+import Deck from './deckOfCards/Deck'
 
 class App extends Component {
   render() {
@@ -11,7 +12,8 @@ class App extends Component {
       <div className="App">
         {/* <Timer /> */}
         {/* <ZenQuotes /> */}
-        <GithubUserInfo username="Elie" />
+        {/* <GithubUserInfo username="Elie" /> */}
+        <Deck />
       </div>
     )
   }
