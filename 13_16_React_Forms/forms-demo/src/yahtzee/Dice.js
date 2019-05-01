@@ -10,6 +10,7 @@ class Dice extends Component {
           <Die
             handleClick={this.props.handleClick}
             val={d}
+            rolling={this.props.rolling}
             locked={this.props.locked[idx]}
             idx={idx}
             key={idx}
