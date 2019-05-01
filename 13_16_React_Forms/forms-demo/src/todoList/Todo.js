@@ -6,24 +6,30 @@ class Todo extends Component {
     super(props)
     this.state = { isEditing: false, todo: this.props.todoItem }
   }
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
   handleDelete = () => {
     this.props.deleteTodo(this.props.id)
   }
   toggleForm = () => {
     this.setState({ isEditing: !this.state.isEditing })
   }
+  handleToggle = e => {
+    this.props.toggleTodo(this.props.id)
+  }
   handleUpdate = e => {
     e.preventDefault()
     this.props.updateTodo(this.props.id, this.state.todo)
     this.toggleForm()
   }
-  handleChange = e => {
-    this.setState({
-      [e.target.name]: e.target.value
-    })
-  }
-  handleToggle = e => {
-    this.props.toggleTodo(this.props.id)
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('TODO COMPONENT DID UPDATE')
+    console.log(prevProps.todo)
+    console.log(this.state.todo)
   }
 
   render() {

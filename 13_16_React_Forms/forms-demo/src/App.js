@@ -8,9 +8,9 @@ import './App.css'
 
 // import BoxList from './colorBox/BoxList'
 
-// import TodoList from './todoList/TodoList'
+import TodoList from './todoList/TodoList'
 
-import Game from './yahtzee/Game'
+// import Game from './yahtzee/Game'
 
 function App() {
   return (
@@ -22,9 +22,9 @@ function App() {
 
       {/* <BoxList /> */}
 
-      {/* <TodoList /> */}
+      <TodoList />
 
-      <Game />
+      {/* <Game /> */}
     </div>
   )
 }
