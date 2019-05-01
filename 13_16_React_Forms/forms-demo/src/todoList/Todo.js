@@ -32,6 +32,10 @@ class Todo extends Component {
     console.log(this.state.todo)
   }
 
+  componentWillUnmount() {
+    console.log('IN COMPONENT WILL UNMOUNT')
+  }
+
   render() {
     let result
     if (this.state.isEditing) {
