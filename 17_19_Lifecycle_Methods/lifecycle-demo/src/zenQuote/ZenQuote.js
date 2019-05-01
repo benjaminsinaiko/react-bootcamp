@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import Loader from './Loader'
+import Loader from '../loader/Loader'
 
 class ZenQuote extends Component {
   constructor(props) {
