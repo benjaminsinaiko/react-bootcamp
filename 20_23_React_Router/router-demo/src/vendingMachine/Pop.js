@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Message from './Message'
 import popImg from './Pop.png'
 import './Pop.css'
 
@@ -8,10 +9,11 @@ class Pop extends Component {
     return (
       <div className="Pop">
         <img src={popImg} alt="Can of pop" />
-        <div>
+
+        <Message>
           <h1>Pop</h1>
-        </div>
-        <Link to="/">Go Back</Link>
+          <Link to="/">Go Back</Link>
+        </Message>
       </div>
     )
   }
