@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Route, Switch, NavLink } from 'react-router-dom'
+import NavBar from './vendingMachine/NavBar'
 import VendingMachine from './vendingMachine/VendingMachine'
 import Chips from './vendingMachine/Chips'
 import Sardines from './vendingMachine/Sardines'
@@ -11,6 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <NavBar />
         <Switch>
           <Route exact path="/" component={VendingMachine} />
           <Route exact path="/pop" component={Pop} />

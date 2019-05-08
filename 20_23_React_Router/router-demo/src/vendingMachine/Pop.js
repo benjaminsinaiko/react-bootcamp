@@ -8,6 +8,10 @@ class Pop extends Component {
     return (
       <div className="Pop">
         <img src={popImg} alt="Can of pop" />
+        <div>
+          <h1>Pop</h1>
+        </div>
+        <Link to="/">Go Back</Link>
       </div>
     )
   }
