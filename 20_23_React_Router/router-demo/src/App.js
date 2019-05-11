@@ -38,6 +38,11 @@ class App extends Component {
             path="/food/:foodName/drink/:drinkName"
             component={Meal}
           />
+          {/* <Route
+            exact
+            path='/'
+            render={routeProps => <FoodSearch {...routeProps}/>}
+          /> */}
           <Route exact path="/" component={FoodSearch} />
           <Route render={() => <h1>ERROR NOT FOUND!!!</h1>} />
         </Switch>
