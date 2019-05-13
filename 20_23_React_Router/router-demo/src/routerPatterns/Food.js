@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
-import "./Food.css";
+import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
+import './Food.css'
 class Food extends Component {
   render() {
-    const name = this.props.match.params.name;
-    const url = `https://source.unsplash.com/1600x900/?${name}`;
+    const name = this.props.match.params.name
+    const url = `https://source.unsplash.com/1600x900/?${name}`
     return (
-      <div className='Food'>
+      <div className="Food">
         {/\d/.test(name) ? (
-          <Redirect to='/' />
+          <Redirect to="/notfound" />
         ) : (
           <div>
             <h1>I love to eat {name}</h1>
@@ -16,8 +16,8 @@ class Food extends Component {
           </div>
         )}
       </div>
-    );
+    )
   }
 }
 
-export default Food;
+export default Food
