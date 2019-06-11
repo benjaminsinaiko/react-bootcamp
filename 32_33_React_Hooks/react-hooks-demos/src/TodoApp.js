@@ -11,7 +11,7 @@ import TodoList from './TodoList';
 function TodoApp() {
   const initialTodos = [
     { id: 1, task: 'Walk dog', completed: false },
-    { id: 2, task: 'Take out trash', completed: false },
+    { id: 2, task: 'Take out trash', completed: true },
     { id: 3, task: 'Order food', completed: false },
   ];
   const [todos, setTodos] = useState(initialTodos);
@@ -33,8 +33,12 @@ function TodoApp() {
           <Typography color="inherit">TODOS WITH HOOKS</Typography>
         </Toolbar>
       </AppBar>
-      <TodoForm addTodo={addTodo} />
-      <TodoList todos={todos} />
+      <Grid container justify="center" style={{ marginTop: '1rem' }}>
+        <Grid item xs={11} md={8} lg={4}>
+          <TodoForm addTodo={addTodo} />
+          <TodoList todos={todos} />
+        </Grid>
+      </Grid>
     </Paper>
   );
 }
