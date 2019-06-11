@@ -20,7 +20,7 @@ class App extends Component {
         <SimpleFormHooks />
         <SimpleFormInputHook />
         <Clicker />
-        {/* <SWMovies /> */}
+        <SWMovies />
       </div>
     );
   }
