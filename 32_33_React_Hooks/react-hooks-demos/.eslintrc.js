@@ -24,5 +24,12 @@ module.exports = {
     'react/prefer-stateless-function': 0,
     'react/jsx-one-expression-per-line': 0,
     'no-underscore-dangle': ['error', { allowAfterThis: true }],
+    'max-len': [
+      1,
+      {
+        code: 100,
+        tabWidth: 2,
+      },
+    ],
   },
 };
