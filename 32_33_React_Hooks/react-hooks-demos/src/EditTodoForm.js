@@ -16,8 +16,8 @@ function EditTodoForm({
   };
 
   return (
-    <form onSubmit={handleEdit}>
-      <TextField margin="normal" value={value} onChange={handleChange} fullWidth />
+    <form onSubmit={handleEdit} style={{ marginLeft: '1rem', width: '50%' }}>
+      <TextField margin="normal" value={value} onChange={handleChange} fullWidth autoFocus />
     </form>
   );
 }
