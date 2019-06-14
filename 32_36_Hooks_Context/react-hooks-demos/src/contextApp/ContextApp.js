@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
+import Navbar from './Navbar';
+
 class ContextApp extends Component {
   render() {
     return (
       <div>
-        <h1>ContextApp</h1>
+        <Navbar />
       </div>
     );
   }
