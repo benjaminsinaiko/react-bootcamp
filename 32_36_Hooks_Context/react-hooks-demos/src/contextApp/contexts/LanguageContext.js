@@ -24,3 +24,9 @@ export class LanguageProvider extends Component {
     );
   }
 }
+
+export const withLanguageContext = ContextComponent => props => (
+  <LanguageContext.Consumer>
+    {value => <ContextComponent languageContext={value} {...props} />}
+  </LanguageContext.Consumer>
+);
