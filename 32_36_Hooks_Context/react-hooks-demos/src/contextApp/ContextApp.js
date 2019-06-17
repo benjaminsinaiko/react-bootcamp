@@ -6,6 +6,8 @@ import PageContent from './PageContent';
 import Navbar from './Navbar';
 import Form from './Form';
 
+import FormHooks from './FormHooks';
+
 class ContextApp extends Component {
   render() {
     return (
@@ -14,6 +16,8 @@ class ContextApp extends Component {
           <LanguageProvider>
             <Navbar />
             <Form />
+            <hr style={{ borderColor: 'red', width: '50%', margin: '64px auto 0px' }} />
+            <FormHooks />
           </LanguageProvider>
         </PageContent>
       </ThemeProvider>
