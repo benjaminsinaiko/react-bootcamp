@@ -8,14 +8,18 @@ import Switch from '@material-ui/core/Switch';
 import InputBase from '@material-ui/core/InputBase';
 import withStyles from '@material-ui/core/styles/withStyles';
 
+import { ThemeContext } from './contexts/ThemeContext';
 import styles from './styles/NavbarStyles';
 
 class Navbar extends Component {
+  static contextType = ThemeContext;
+
   render() {
+    const { isDarkMode } = this.context;
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <AppBar position="static" color="primary">
+        <AppBar position="static" color={isDarkMode ? 'default' : 'primary'}>
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit">
               <span role="img" aria-label="language flag">
