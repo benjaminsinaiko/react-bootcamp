@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 
 import Navbar from './Navbar';
+import Form from './Form';
 
 class ContextApp extends Component {
   render() {
     return (
-      <div>
+      <>
         <Navbar />
-      </div>
+        <Form />
+      </>
     );
   }
 }
