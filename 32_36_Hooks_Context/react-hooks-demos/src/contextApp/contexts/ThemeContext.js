@@ -11,8 +11,17 @@ export class ThemeProvider extends Component {
     };
   }
 
+  toggleTheme = () => {
+    const { isDarkMode } = this.state;
+    this.setState({ isDarkMode: !isDarkMode });
+  };
+
   render() {
     const { children } = this.props;
-    return <ThemeContext.Provider value={{ ...this.state }}>{children}</ThemeContext.Provider>;
+    return (
+      <ThemeContext.Provider value={{ ...this.state, toggleTheme: this.toggleTheme }}>
+        {children}
+      </ThemeContext.Provider>
+    );
   }
 }
