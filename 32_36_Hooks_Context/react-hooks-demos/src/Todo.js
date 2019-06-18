@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -8,12 +8,14 @@ import EditIcon from '@material-ui/icons/Edit';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import Divider from '@material-ui/core/Divider';
 
+import { TodosContext } from './contexts/todos.context';
 import useToggleState from './hooks/useToggleState';
 import EditTodoForm from './EditTodoForm';
 
 function Todo({
-  id, task, completed, removeTodo, toggleTodo, editTodo, lastTodo,
+  id, task, completed, lastTodo,
 }) {
+  const { removeTodo, toggleTodo } = useContext(TodosContext);
   const [isEditing, toggle] = useToggleState(false);
 
   const handleRemove = () => {
@@ -28,7 +30,7 @@ function Todo({
     <>
       <ListItem style={{ height: '64px' }}>
         {isEditing ? (
-          <EditTodoForm id={id} task={task} editTodo={editTodo} toggleEditForm={toggle} />
+          <EditTodoForm id={id} task={task} toggleEditForm={toggle} />
         ) : (
           <>
             <Checkbox tabIndex={-1} onClick={handleToggle} checked={completed} />
