@@ -25,8 +25,9 @@ export class LanguageProvider extends Component {
   }
 }
 
-export const withLanguageContext = ContextComponent => props => (
-  <LanguageContext.Consumer>
-    {value => <ContextComponent languageContext={value} {...props} />}
-  </LanguageContext.Consumer>
-);
+// Only needed HOC for class based Components
+// export const withLanguageContext = ContextComponent => props => (
+//   <LanguageContext.Consumer>
+//     {value => <ContextComponent languageContext={value} {...props} />}
+//   </LanguageContext.Consumer>
+// );
