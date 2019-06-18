@@ -7,15 +7,18 @@ import { TodosContext } from './contexts/todos.context';
 
 function TodoList() {
   const { todos } = useContext(TodosContext);
-  return (
-    <Paper>
-      <List>
-        {todos.map((todo, i) => (
-          <Todo {...todo} key={todo.id} lastTodo={i === todos.length - 1} />
-        ))}
-      </List>
-    </Paper>
-  );
+  if (todos.length) {
+    return (
+      <Paper>
+        <List>
+          {todos.map((todo, i) => (
+            <Todo {...todo} key={todo.id} lastTodo={i === todos.length - 1} />
+          ))}
+        </List>
+      </Paper>
+    );
+  }
+  return null;
 }
 
 export default TodoList;

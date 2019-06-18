@@ -15,15 +15,15 @@ import EditTodoForm from './EditTodoForm';
 function Todo({
   id, task, completed, lastTodo,
 }) {
-  const { removeTodo, toggleTodo } = useContext(TodosContext);
+  const { dispatch } = useContext(TodosContext);
   const [isEditing, toggle] = useToggleState(false);
 
   const handleRemove = () => {
-    removeTodo(id);
+    dispatch({ type: 'REMOVE_TODO', id });
   };
 
   const handleToggle = () => {
-    toggleTodo(id);
+    dispatch({ type: 'TOGGLE_TODO', id });
   };
 
   return (

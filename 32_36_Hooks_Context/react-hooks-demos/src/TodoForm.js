@@ -7,11 +7,11 @@ import useInputState from './hooks/useInputState';
 
 function TodoForm() {
   const [value, handleChange, resetValue] = useInputState('');
-  const { addTodo } = useContext(TodosContext);
+  const { dispatch } = useContext(TodosContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTodo(value);
+    dispatch({ type: 'ADD_TODO', task: value });
     resetValue();
   };
 
